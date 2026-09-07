@@ -4,582 +4,623 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>E-Buy | Online Shopping</title>
-  <meta name="description" content="E-Buy - Shop electronics, fashion, home products, beauty, sports and accessories online.">
+  <title>E-Buy | Buy • Sell • Exchange</title>
+
+  <meta
+    name="description"
+    content="E-Buy is a modern marketplace where you can buy, sell and exchange products."
+  >
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- ================= HEADER ================= -->
-  <header class="header">
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-    <div class="top-header">
+<header class="header">
 
-      <a href="#home" class="logo">
-        <span>E</span>-Buy
-      </a>
+  <div class="top-header">
 
-      <div class="search-box">
-        <input
-          type="search"
-          id="searchInput"
-          placeholder="Search products..."
-          aria-label="Search products"
-        >
-        <button id="searchBtn">🔍</button>
-      </div>
+    <a href="#home" class="logo">
+      <span>E</span>-Buy
+    </a>
 
-      <div class="header-actions">
+    <div class="search-box">
 
-        <button class="header-btn" id="accountBtn">
-          👤
-          <small>Account</small>
-        </button>
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Search products, sellers or exchanges..."
+        aria-label="Search E-Buy"
+      >
 
-        <button class="header-btn" id="wishlistBtn">
-          ♡
-          <span id="wishlistCount">0</span>
-          <small>Wishlist</small>
-        </button>
-
-        <button class="header-btn" id="cartBtn">
-          🛒
-          <span id="cartCount">0</span>
-          <small>Cart</small>
-        </button>
-
-      </div>
+      <button id="searchBtn" type="button">
+        🔍
+      </button>
 
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-
-      <a href="#home">Home</a>
-      <a href="#categories">Categories</a>
-      <a href="#products">Products</a>
-      <a href="#deals">Deals</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-
-    </nav>
-
-  </header>
-
-
-  <!-- ================= HERO ================= -->
-  <main>
-
-    <section class="hero" id="home">
-
-      <div class="hero-content">
-
-        <p class="hero-small">WELCOME TO E-BUY</p>
-
-        <h1>
-          Everything You Need.
-          <span>All in One Place.</span>
-        </h1>
-
-        <p>
-          Discover quality products at great prices.
-          Shop electronics, fashion, home essentials and more.
-        </p>
-
-        <div class="hero-buttons">
-
-          <a href="#products" class="btn primary-btn">
-            Shop Now →
-          </a>
-
-          <a href="#categories" class="btn secondary-btn">
-            Explore Categories
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="hero-image">
-        <div class="hero-circle">
-          🛍️
-        </div>
-      </div>
-
-    </section>
-
-
-    <!-- ================= FEATURES ================= -->
-    <section class="features">
-
-      <div class="feature">
-        <div class="feature-icon">🚚</div>
-        <div>
-          <h3>Fast Delivery</h3>
-          <p>Quick and reliable delivery</p>
-        </div>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">🔒</div>
-        <div>
-          <h3>Secure Payment</h3>
-          <p>Your payment is protected</p>
-        </div>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">↩️</div>
-        <div>
-          <h3>Easy Returns</h3>
-          <p>Simple return policy</p>
-        </div>
-      </div>
-
-      <div class="feature">
-        <div class="feature-icon">💬</div>
-        <div>
-          <h3>Customer Support</h3>
-          <p>We're here to help</p>
-        </div>
-      </div>
-
-    </section>
-
-
-    <!-- ================= CATEGORIES ================= -->
-    <section class="section" id="categories">
-
-      <div class="section-heading">
-
-        <div>
-          <p class="section-label">SHOP BY CATEGORY</p>
-          <h2>Explore Categories</h2>
-        </div>
-
-        <a href="#products" class="view-all">
-          View All →
-        </a>
-
-      </div>
-
-
-      <div class="category-grid">
-
-        <button class="category-card" data-category="Electronics">
-          <div class="category-image electronics">
-            📱
-          </div>
-          <h3>Electronics</h3>
-          <p>Phones, laptops & more</p>
-        </button>
-
-        <button class="category-card" data-category="Fashion">
-          <div class="category-image fashion">
-            👕
-          </div>
-          <h3>Fashion</h3>
-          <p>Clothes & accessories</p>
-        </button>
-
-        <button class="category-card" data-category="Home">
-          <div class="category-image home">
-            🏠
-          </div>
-          <h3>Home</h3>
-          <p>Everything for your home</p>
-        </button>
-
-        <button class="category-card" data-category="Beauty">
-          <div class="category-image beauty">
-            💄
-          </div>
-          <h3>Beauty</h3>
-          <p>Beauty & personal care</p>
-        </button>
-
-        <button class="category-card" data-category="Sports">
-          <div class="category-image sports">
-            ⚽
-          </div>
-          <h3>Sports</h3>
-          <p>Sports & fitness products</p>
-        </button>
-
-        <button class="category-card" data-category="Accessories">
-          <div class="category-image accessories">
-            ⌚
-          </div>
-          <h3>Accessories</h3>
-          <p>Watches, bags & more</p>
-        </button>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= DEALS ================= -->
-    <section class="deals-section" id="deals">
-
-      <div class="deal-content">
-
-        <p class="section-label">LIMITED TIME OFFER</p>
-
-        <h2>Special Deals</h2>
-
-        <p>
-          Get amazing products at special prices.
-          Don't miss today's offers!
-        </p>
-
-        <a href="#products" class="btn primary-btn">
-          Shop Deals →
-        </a>
-
-      </div>
-
-      <div class="deal-badge">
-        <strong>50%</strong>
-        <span>OFF</span>
-      </div>
-
-    </section>
-
-
-    <!-- ================= PRODUCTS ================= -->
-    <section class="section products-section" id="products">
-
-      <div class="section-heading">
-
-        <div>
-          <p class="section-label">OUR COLLECTION</p>
-          <h2>Popular Products</h2>
-        </div>
-
-        <div class="product-controls">
-
-          <select id="categoryFilter">
-            <option value="all">All Categories</option>
-            <option value="Electronics">Electronics</option>
-            <option value="Fashion">Fashion</option>
-            <option value="Home">Home</option>
-            <option value="Beauty">Beauty</option>
-            <option value="Sports">Sports</option>
-            <option value="Accessories">Accessories</option>
-          </select>
-
-          <select id="sortProducts">
-            <option value="default">Sort By</option>
-            <option value="low">Price: Low to High</option>
-            <option value="high">Price: High to Low</option>
-            <option value="rating">Highest Rated</option>
-          </select>
-
-        </div>
-
-      </div>
-
-
-      <!-- Products will be generated by JavaScript -->
-      <div class="product-grid" id="productGrid"></div>
-
-      <div class="no-products" id="noProducts" hidden>
-        <div>🔎</div>
-        <h3>No products found</h3>
-        <p>Try another search or category.</p>
-      </div>
-
-    </section>
-
-
-    <!-- ================= WHY E-BUY ================= -->
-    <section class="why-section">
-
-      <div class="why-image">
+    <div class="header-actions">
+
+      <button class="header-btn" id="accountBtn" type="button">
+        👤
+        <small>Account</small>
+      </button>
+
+      <button class="header-btn" id="wishlistBtn" type="button">
+        ♡
+        <span id="wishlistCount">0</span>
+        <small>Saved</small>
+      </button>
+
+      <button class="header-btn" id="cartBtn" type="button">
         🛒
-      </div>
-
-      <div class="why-content">
-
-        <p class="section-label">WHY CHOOSE E-BUY?</p>
-
-        <h2>
-          Shopping Made
-          <span>Simple & Better</span>
-        </h2>
-
-        <p>
-          E-Buy brings a wide selection of products together
-          in one convenient online store.
-        </p>
-
-        <div class="why-list">
-
-          <div>
-            <span>✓</span>
-            <p>Quality products</p>
-          </div>
-
-          <div>
-            <span>✓</span>
-            <p>Competitive prices</p>
-          </div>
-
-          <div>
-            <span>✓</span>
-            <p>Easy online shopping</p>
-          </div>
-
-          <div>
-            <span>✓</span>
-            <p>Customer-focused service</p>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= ABOUT ================= -->
-    <section class="section about-section" id="about">
-
-      <div class="section-heading">
-        <div>
-          <p class="section-label">ABOUT US</p>
-          <h2>About E-Buy</h2>
-        </div>
-      </div>
-
-      <div class="about-content">
-
-        <div class="about-card">
-
-          <div class="about-icon">🛍️</div>
-
-          <h3>Your Online Shopping Partner</h3>
-
-          <p>
-            E-Buy is an online shopping platform designed to make
-            discovering and buying products simple, convenient
-            and enjoyable.
-          </p>
-
-        </div>
-
-        <div class="about-card">
-
-          <div class="about-icon">⭐</div>
-
-          <h3>Our Goal</h3>
-
-          <p>
-            We aim to provide customers with a smooth shopping
-            experience, useful products and excellent service.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ================= NEWSLETTER ================= -->
-    <section class="newsletter">
-
-      <div>
-
-        <p class="section-label">STAY UPDATED</p>
-
-        <h2>Get the Latest Deals</h2>
-
-        <p>
-          Subscribe to receive new product and special offer updates.
-        </p>
-
-      </div>
-
-      <form id="newsletterForm">
-
-        <input
-          type="email"
-          id="newsletterEmail"
-          placeholder="Enter your email address"
-          required
-        >
-
-        <button type="submit" class="btn primary-btn">
-          Subscribe
-        </button>
-
-      </form>
-
-    </section>
-
-
-    <!-- ================= CONTACT ================= -->
-    <section class="section contact-section" id="contact">
-
-      <div class="section-heading">
-
-        <div>
-          <p class="section-label">CONTACT US</p>
-          <h2>We're Here to Help</h2>
-        </div>
-
-      </div>
-
-      <div class="contact-grid">
-
-        <div class="contact-card">
-
-          <div class="contact-icon">📧</div>
-
-          <h3>Email</h3>
-
-          <p>support@e-buy.com</p>
-
-        </div>
-
-        <div class="contact-card">
-
-          <div class="contact-icon">📞</div>
-
-          <h3>Phone</h3>
-
-          <p>+251 900 000 000</p>
-
-        </div>
-
-        <div class="contact-card">
-
-          <div class="contact-icon">📍</div>
-
-          <h3>Location</h3>
-
-          <p>Online Store</p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-  <!-- ================= CART SIDEBAR ================= -->
-
-  <div class="overlay" id="overlay"></div>
-
-  <aside class="cart-sidebar" id="cartSidebar">
-
-    <div class="cart-header">
-
-      <h2>Your Cart</h2>
-
-      <button id="closeCart" class="close-btn">
-        ×
+        <span id="cartCount">0</span>
+        <small>Cart</small>
       </button>
-
-    </div>
-
-    <div class="cart-items" id="cartItems"></div>
-
-    <div class="cart-empty" id="cartEmpty">
-
-      <div>🛒</div>
-
-      <h3>Your cart is empty</h3>
-
-      <p>Add products to start shopping.</p>
-
-    </div>
-
-    <div class="cart-footer">
-
-      <div class="cart-total">
-
-        <span>Total</span>
-        <strong id="cartTotal">$0.00</strong>
-
-      </div>
-
-      <button class="checkout-btn" id="checkoutBtn">
-        Proceed to Checkout
-      </button>
-
-    </div>
-
-  </aside>
-
-
-  <!-- ================= PRODUCT MODAL ================= -->
-
-  <div class="modal" id="productModal">
-
-    <div class="modal-box">
-
-      <button class="modal-close" id="closeProductModal">
-        ×
-      </button>
-
-      <div id="productModalContent"></div>
 
     </div>
 
   </div>
 
 
-  <!-- ================= CHECKOUT MODAL ================= -->
+  <!-- Navigation -->
 
-  <div class="modal" id="checkoutModal">
+  <nav class="navbar">
 
-    <div class="modal-box checkout-box">
+    <a href="#home">Home</a>
+    <a href="#buy">Buy</a>
+    <a href="#sell">Sell</a>
+    <a href="#exchange">Exchange</a>
+    <a href="#categories">Categories</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
 
-      <button class="modal-close" id="closeCheckoutModal">
-        ×
-      </button>
+  </nav>
 
-      <h2>Checkout</h2>
+</header>
 
-      <p class="checkout-subtitle">
-        Complete your information to place your order.
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <p class="hero-small">
+      WELCOME TO E-BUY MARKETPLACE
+    </p>
+
+    <h1>
+      Buy. Sell.
+      <span>Exchange.</span>
+    </h1>
+
+    <p>
+      E-Buy is a modern marketplace where people can
+      discover products, sell their own items and exchange
+      things with other users.
+    </p>
+
+
+    <div class="hero-buttons">
+
+      <a href="#buy" class="btn primary-btn">
+        🛒 Start Buying
+      </a>
+
+      <a href="#sell" class="btn secondary-btn">
+        💰 Sell Something
+      </a>
+
+      <a href="#exchange" class="btn secondary-btn">
+        🔄 Exchange
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="hero-image">
+
+    <div class="hero-circle">
+      🛍️
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MARKETPLACE ACTIONS
+===================================================== -->
+
+<section class="marketplace-actions">
+
+  <div class="marketplace-card buy-card">
+
+    <div class="marketplace-icon">
+      🛒
+    </div>
+
+    <h2>Buy</h2>
+
+    <p>
+      Find products from different sellers
+      and purchase what you need.
+    </p>
+
+    <a href="#buy" class="marketplace-btn">
+      Browse Products →
+    </a>
+
+  </div>
+
+
+  <div class="marketplace-card sell-card">
+
+    <div class="marketplace-icon">
+      💰
+    </div>
+
+    <h2>Sell</h2>
+
+    <p>
+      Have something you don't need?
+      List it and find a buyer.
+    </p>
+
+    <a href="#sell" class="marketplace-btn">
+      Sell Your Product →
+    </a>
+
+  </div>
+
+
+  <div class="marketplace-card exchange-card">
+
+    <div class="marketplace-icon">
+      🔄
+    </div>
+
+    <h2>Exchange</h2>
+
+    <p>
+      Trade your item with another person
+      for something you want.
+    </p>
+
+    <a href="#exchange" class="marketplace-btn">
+      Find Exchanges →
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FEATURES
+===================================================== -->
+
+<section class="features">
+
+  <div class="feature">
+
+    <div class="feature-icon">
+      🛡️
+    </div>
+
+    <div>
+      <h3>Safe Marketplace</h3>
+      <p>Designed for safer transactions</p>
+    </div>
+
+  </div>
+
+
+  <div class="feature">
+
+    <div class="feature-icon">
+      🚚
+    </div>
+
+    <div>
+      <h3>Easy Delivery</h3>
+      <p>Convenient product delivery</p>
+    </div>
+
+  </div>
+
+
+  <div class="feature">
+
+    <div class="feature-icon">
+      🔄
+    </div>
+
+    <div>
+      <h3>Easy Exchange</h3>
+      <p>Trade items with other users</p>
+    </div>
+
+  </div>
+
+
+  <div class="feature">
+
+    <div class="feature-icon">
+      💬
+    </div>
+
+    <div>
+      <h3>Communication</h3>
+      <p>Connect with buyers and sellers</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BUY SECTION
+===================================================== -->
+
+<section class="section products-section" id="buy">
+
+  <div class="section-heading">
+
+    <div>
+
+      <p class="section-label">
+        BUY PRODUCTS
       </p>
 
-      <form id="checkoutForm">
+      <h2>
+        Discover Products
+      </h2>
+
+    </div>
+
+
+    <div class="product-controls">
+
+      <select id="categoryFilter">
+
+        <option value="all">
+          All Categories
+        </option>
+
+        <option value="Electronics">
+          Electronics
+        </option>
+
+        <option value="Fashion">
+          Fashion
+        </option>
+
+        <option value="Vehicles">
+          Vehicles
+        </option>
+
+        <option value="Home">
+          Home
+        </option>
+
+        <option value="Beauty">
+          Beauty
+        </option>
+
+        <option value="Sports">
+          Sports
+        </option>
+
+        <option value="Accessories">
+          Accessories
+        </option>
+
+      </select>
+
+
+      <select id="sortProducts">
+
+        <option value="default">
+          Sort By
+        </option>
+
+        <option value="low">
+          Price: Low to High
+        </option>
+
+        <option value="high">
+          Price: High to Low
+        </option>
+
+        <option value="rating">
+          Highest Rated
+        </option>
+
+      </select>
+
+    </div>
+
+  </div>
+
+
+  <!-- Products generated by JavaScript -->
+
+  <div
+    class="product-grid"
+    id="productGrid"
+  ></div>
+
+
+  <div
+    class="no-products"
+    id="noProducts"
+    hidden
+  >
+
+    <div>🔎</div>
+
+    <h3>
+      No products found
+    </h3>
+
+    <p>
+      Try another search or category.
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SELL SECTION
+===================================================== -->
+
+<section class="section sell-section" id="sell">
+
+  <div class="sell-header">
+
+    <div>
+
+      <p class="section-label">
+        SELL ON E-BUY
+      </p>
+
+      <h2>
+        Turn Your Unused Items Into Money
+      </h2>
+
+      <p>
+        List your products on E-Buy and connect
+        with people who are looking for them.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="sell-layout">
+
+
+    <!-- Sell Information -->
+
+    <div class="sell-info">
+
+      <div class="sell-step">
+
+        <span>1</span>
+
+        <div>
+
+          <h3>
+            Add your product
+          </h3>
+
+          <p>
+            Upload photos and provide information
+            about your item.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="sell-step">
+
+        <span>2</span>
+
+        <div>
+
+          <h3>
+            Set your price
+          </h3>
+
+          <p>
+            Choose a price that works for you.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="sell-step">
+
+        <span>3</span>
+
+        <div>
+
+          <h3>
+            Connect with buyers
+          </h3>
+
+          <p>
+            Interested buyers can contact you.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Sell Form -->
+
+    <div class="form-card">
+
+      <h2>
+        Create a Listing
+      </h2>
+
+      <p class="form-description">
+        Add your product information below.
+      </p>
+
+
+      <form id="sellForm">
+
 
         <div class="form-group">
 
-          <label for="customerName">
-            Full Name
+          <label for="sellProductName">
+            Product Name
           </label>
 
           <input
             type="text"
-            id="customerName"
-            placeholder="Your full name"
+            id="sellProductName"
+            placeholder="Example: iPhone 15"
             required
           >
 
         </div>
 
 
+        <div class="form-row">
+
+          <div class="form-group">
+
+            <label for="sellCategory">
+              Category
+            </label>
+
+            <select
+              id="sellCategory"
+              required
+            >
+
+              <option value="">
+                Select category
+              </option>
+
+              <option value="Electronics">
+                Electronics
+              </option>
+
+              <option value="Fashion">
+                Fashion
+              </option>
+
+              <option value="Vehicles">
+                Vehicles
+              </option>
+
+              <option value="Home">
+                Home
+              </option>
+
+              <option value="Beauty">
+                Beauty
+              </option>
+
+              <option value="Sports">
+                Sports
+              </option>
+
+              <option value="Accessories">
+                Accessories
+              </option>
+
+              <option value="Other">
+                Other
+              </option>
+
+            </select>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <label for="sellCondition">
+              Condition
+            </label>
+
+            <select
+              id="sellCondition"
+              required
+            >
+
+              <option value="">
+                Select condition
+              </option>
+
+              <option value="New">
+                New
+              </option>
+
+              <option value="Like New">
+                Like New
+              </option>
+
+              <option value="Used">
+                Used
+              </option>
+
+            </select>
+
+          </div>
+
+        </div>
+
+
         <div class="form-group">
 
-          <label for="customerPhone">
-            Phone Number
+          <label for="sellPrice">
+            Price
           </label>
 
           <input
-            type="tel"
-            id="customerPhone"
-            placeholder="Your phone number"
+            type="number"
+            id="sellPrice"
+            placeholder="Enter price"
+            min="0"
             required
           >
 
@@ -588,14 +629,30 @@
 
         <div class="form-group">
 
-          <label for="customerAddress">
-            Delivery Address
+          <label for="sellLocation">
+            Location
+          </label>
+
+          <input
+            type="text"
+            id="sellLocation"
+            placeholder="City / Area"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="sellDescription">
+            Description
           </label>
 
           <textarea
-            id="customerAddress"
+            id="sellDescription"
             rows="4"
-            placeholder="Enter your delivery address"
+            placeholder="Describe your product..."
             required
           ></textarea>
 
@@ -604,38 +661,24 @@
 
         <div class="form-group">
 
-          <label for="paymentMethod">
-            Payment Method
+          <label for="sellImage">
+            Product Photo
           </label>
 
-          <select id="paymentMethod" required>
-
-            <option value="">
-              Select payment method
-            </option>
-
-            <option value="cash">
-              Cash on Delivery
-            </option>
-
-            <option value="telebirr">
-              Telebirr
-            </option>
-
-            <option value="bank">
-              Bank Transfer
-            </option>
-
-          </select>
+          <input
+            type="file"
+            id="sellImage"
+            accept="image/*"
+          >
 
         </div>
 
 
         <button
           type="submit"
-          class="checkout-btn"
+          class="submit-listing-btn"
         >
-          Place Order
+          Publish Listing →
         </button>
 
       </form>
@@ -644,93 +687,1295 @@
 
   </div>
 
+</section>
 
-  <!-- ================= FOOTER ================= -->
 
-  <footer class="footer">
 
-    <div class="footer-content">
+<!-- =====================================================
+     EXCHANGE SECTION
+===================================================== -->
 
-      <div class="footer-column">
+<section
+  class="section exchange-section"
+  id="exchange"
+>
 
-        <a href="#home" class="logo footer-logo">
-          <span>E</span>-Buy
-        </a>
+  <div class="section-heading">
+
+    <div>
+
+      <p class="section-label">
+        EXCHANGE MARKETPLACE
+      </p>
+
+      <h2>
+        Trade What You Have For What You Want
+      </h2>
+
+      <p>
+        Find people interested in exchanging products.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- Exchange Listings -->
+
+  <div
+    class="exchange-grid"
+    id="exchangeGrid"
+  >
+
+
+    <!-- Exchange Example 1 -->
+
+    <article class="exchange-card">
+
+      <div class="exchange-image">
+        📱
+      </div>
+
+      <div class="exchange-content">
+
+        <span class="exchange-label">
+          WANTS TO EXCHANGE
+        </span>
+
+        <h3>
+          iPhone 13
+        </h3>
 
         <p>
-          Your trusted online shopping destination.
-          Quality products, great prices.
+          Good condition. Looking for another
+          smartphone or laptop.
         </p>
 
-      </div>
-
-
-      <div class="footer-column">
-
-        <h3>Quick Links</h3>
-
-        <a href="#home">Home</a>
-        <a href="#products">Products</a>
-        <a href="#categories">Categories</a>
-        <a href="#deals">Deals</a>
-
-      </div>
-
-
-      <div class="footer-column">
-
-        <h3>Customer Service</h3>
-
-        <a href="#contact">Contact Us</a>
-        <a href="#about">About Us</a>
-        <a href="#">Shipping</a>
-        <a href="#">Returns</a>
-
-      </div>
-
-
-      <div class="footer-column">
-
-        <h3>Follow Us</h3>
-
-        <div class="social-links">
-
-          <a href="#" aria-label="Facebook">
-            Facebook
-          </a>
-
-          <a href="#" aria-label="Instagram">
-            Instagram
-          </a>
-
-          <a href="#" aria-label="TikTok">
-            TikTok
-          </a>
-
+        <div class="exchange-location">
+          📍 Addis Ababa
         </div>
 
+        <button
+          class="exchange-request-btn"
+          type="button"
+        >
+          🔄 Request Exchange
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- Exchange Example 2 -->
+
+    <article class="exchange-card">
+
+      <div class="exchange-image">
+        💻
+      </div>
+
+      <div class="exchange-content">
+
+        <span class="exchange-label">
+          WANTS TO EXCHANGE
+        </span>
+
+        <h3>
+          Gaming Laptop
+        </h3>
+
+        <p>
+          Looking for a newer smartphone,
+          tablet or similar device.
+        </p>
+
+        <div class="exchange-location">
+          📍 Addis Ababa
+        </div>
+
+        <button
+          class="exchange-request-btn"
+          type="button"
+        >
+          🔄 Request Exchange
+        </button>
+
+      </div>
+
+    </article>
+
+
+    <!-- Exchange Example 3 -->
+
+    <article class="exchange-card">
+
+      <div class="exchange-image">
+        🚲
+      </div>
+
+      <div class="exchange-content">
+
+        <span class="exchange-label">
+          WANTS TO EXCHANGE
+        </span>
+
+        <h3>
+          Mountain Bicycle
+        </h3>
+
+        <p>
+          Well maintained bicycle.
+          Interested in sports equipment.
+        </p>
+
+        <div class="exchange-location">
+          📍 Addis Ababa
+        </div>
+
+        <button
+          class="exchange-request-btn"
+          type="button"
+        >
+          🔄 Request Exchange
+        </button>
+
+      </div>
+
+    </article>
+
+  </div>
+
+
+
+  <!-- Create Exchange -->
+
+  <div class="exchange-create">
+
+    <div>
+
+      <p class="section-label">
+        HAVE SOMETHING TO TRADE?
+      </p>
+
+      <h2>
+        Create an Exchange Listing
+      </h2>
+
+      <p>
+        Tell other users what you have
+        and what you want in return.
+      </p>
+
+    </div>
+
+
+    <button
+      id="createExchangeBtn"
+      class="btn primary-btn"
+      type="button"
+    >
+      Create Exchange →
+    </button>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORIES
+===================================================== -->
+
+<section
+  class="section"
+  id="categories"
+>
+
+  <div class="section-heading">
+
+    <div>
+
+      <p class="section-label">
+        EXPLORE
+      </p>
+
+      <h2>
+        Popular Categories
+      </h2>
+
+    </div>
+
+  </div>
+
+
+  <div class="category-grid">
+
+
+    <button
+      class="category-card"
+      data-category="Electronics"
+      type="button"
+    >
+
+      <div class="category-image electronics">
+        📱
+      </div>
+
+      <h3>
+        Electronics
+      </h3>
+
+      <p>
+        Phones, laptops & gadgets
+      </p>
+
+    </button>
+
+
+    <button
+      class="category-card"
+      data-category="Fashion"
+      type="button"
+    >
+
+      <div class="category-image fashion">
+        👕
+      </div>
+
+      <h3>
+        Fashion
+      </h3>
+
+      <p>
+        Clothes, shoes & bags
+      </p>
+
+    </button>
+
+
+    <button
+      class="category-card"
+      data-category="Vehicles"
+      type="button"
+    >
+
+      <div class="category-image vehicles">
+        🚗
+      </div>
+
+      <h3>
+        Vehicles
+      </h3>
+
+      <p>
+        Cars, bikes & motorcycles
+      </p>
+
+    </button>
+
+
+    <button
+      class="category-card"
+      data-category="Home"
+      type="button"
+    >
+
+      <div class="category-image home">
+        🏠
+      </div>
+
+      <h3>
+        Home
+      </h3>
+
+      <p>
+        Furniture & home products
+      </p>
+
+    </button>
+
+
+    <button
+      class="category-card"
+      data-category="Beauty"
+      type="button"
+    >
+
+      <div class="category-image beauty">
+        💄
+      </div>
+
+      <h3>
+        Beauty
+      </h3>
+
+      <p>
+        Beauty & personal care
+      </p>
+
+    </button>
+
+
+    <button
+      class="category-card"
+      data-category="Sports"
+      type="button"
+    >
+
+      <div class="category-image sports">
+        ⚽
+      </div>
+
+      <h3>
+        Sports
+      </h3>
+
+      <p>
+        Sports & fitness
+      </p>
+
+    </button>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SPECIAL DEALS
+===================================================== -->
+
+<section
+  class="deals-section"
+  id="deals"
+>
+
+  <div class="deal-content">
+
+    <p class="section-label">
+      E-BUY DEALS
+    </p>
+
+    <h2>
+      Great Products.
+      Great Prices.
+    </h2>
+
+    <p>
+      Discover special offers from E-Buy sellers.
+    </p>
+
+    <a
+      href="#buy"
+      class="btn primary-btn"
+    >
+      Shop Deals →
+    </a>
+
+  </div>
+
+
+  <div class="deal-badge">
+
+    <strong>
+      50%
+    </strong>
+
+    <span>
+      OFF
+    </span>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY E-BUY
+===================================================== -->
+
+<section class="why-section">
+
+  <div class="why-image">
+    🔄
+  </div>
+
+
+  <div class="why-content">
+
+    <p class="section-label">
+      WHY E-BUY?
+    </p>
+
+    <h2>
+      More Than Just
+      <span>Online Shopping</span>
+    </h2>
+
+    <p>
+      E-Buy connects buyers and sellers while
+      giving people another option: exchanging
+      products instead of always buying new ones.
+    </p>
+
+
+    <div class="why-list">
+
+      <div>
+        <span>✓</span>
+        <p>Buy products</p>
+      </div>
+
+      <div>
+        <span>✓</span>
+        <p>Sell your items</p>
+      </div>
+
+      <div>
+        <span>✓</span>
+        <p>Exchange products</p>
+      </div>
+
+      <div>
+        <span>✓</span>
+        <p>Connect with users</p>
       </div>
 
     </div>
 
+  </div>
 
-    <div class="footer-bottom">
+</section>
 
-      <p>
-        © 2026 E-Buy. All rights reserved.
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section
+  class="section about-section"
+  id="about"
+>
+
+  <div class="section-heading">
+
+    <div>
+
+      <p class="section-label">
+        ABOUT E-BUY
       </p>
 
+      <h2>
+        One Marketplace, Three Ways to Trade
+      </h2>
+
+    </div>
+
+  </div>
+
+
+  <div class="about-content">
+
+
+    <div class="about-card">
+
+      <div class="about-icon">
+        🛒
+      </div>
+
+      <h3>
+        Buy
+      </h3>
+
       <p>
-        Built for better online shopping.
+        Discover products from different
+        sellers and find what you need.
       </p>
 
     </div>
 
-  </footer>
+
+    <div class="about-card">
+
+      <div class="about-icon">
+        💰
+      </div>
+
+      <h3>
+        Sell
+      </h3>
+
+      <p>
+        Turn products you no longer need
+        into money by listing them.
+      </p>
+
+    </div>
 
 
-  <!-- JavaScript -->
-  <script src="script.js"></script>
+    <div class="about-card">
+
+      <div class="about-icon">
+        🔄
+      </div>
+
+      <h3>
+        Exchange
+      </h3>
+
+      <p>
+        Trade your product with someone
+        who has something you want.
+      </p>
+
+    </div>
+
+
+    <div class="about-card">
+
+      <div class="about-icon">
+        🤝
+      </div>
+
+      <h3>
+        Connect
+      </h3>
+
+      <p>
+        Build connections between buyers,
+        sellers and people who want to trade.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<section class="newsletter">
+
+  <div>
+
+    <p class="section-label">
+      STAY CONNECTED
+    </p>
+
+    <h2>
+      Get New Listings & Deals
+    </h2>
+
+    <p>
+      Receive updates about new products,
+      deals and exchange opportunities.
+    </p>
+
+  </div>
+
+
+  <form id="newsletterForm">
+
+    <input
+      type="email"
+      id="newsletterEmail"
+      placeholder="Enter your email address"
+      required
+    >
+
+    <button
+      type="submit"
+      class="btn primary-btn"
+    >
+      Subscribe
+    </button>
+
+  </form>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section
+  class="section contact-section"
+  id="contact"
+>
+
+  <div class="section-heading">
+
+    <div>
+
+      <p class="section-label">
+        CONTACT
+      </p>
+
+      <h2>
+        Need Help?
+      </h2>
+
+    </div>
+
+  </div>
+
+
+  <div class="contact-grid">
+
+
+    <div class="contact-card">
+
+      <div class="contact-icon">
+        📧
+      </div>
+
+      <h3>
+        Email
+      </h3>
+
+      <p>
+        support@e-buy.com
+      </p>
+
+    </div>
+
+
+    <div class="contact-card">
+
+      <div class="contact-icon">
+        📞
+      </div>
+
+      <h3>
+        Phone
+      </h3>
+
+      <p>
+        +251 900 000 000
+      </p>
+
+    </div>
+
+
+    <div class="contact-card">
+
+      <div class="contact-icon">
+        💬
+      </div>
+
+      <h3>
+        Marketplace Support
+      </h3>
+
+      <p>
+        Buyer & seller assistance
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     OVERLAY
+===================================================== -->
+
+<div
+  class="overlay"
+  id="overlay"
+></div>
+
+
+
+<!-- =====================================================
+     CART SIDEBAR
+===================================================== -->
+
+<aside
+  class="cart-sidebar"
+  id="cartSidebar"
+>
+
+  <div class="cart-header">
+
+    <h2>
+      Your Cart
+    </h2>
+
+    <button
+      id="closeCart"
+      class="close-btn"
+      type="button"
+    >
+      ×
+    </button>
+
+  </div>
+
+
+  <div
+    class="cart-items"
+    id="cartItems"
+  ></div>
+
+
+  <div
+    class="cart-empty"
+    id="cartEmpty"
+  >
+
+    <div>
+      🛒
+    </div>
+
+    <h3>
+      Your cart is empty
+    </h3>
+
+    <p>
+      Add products to start shopping.
+    </p>
+
+  </div>
+
+
+  <div class="cart-footer">
+
+    <div class="cart-total">
+
+      <span>
+        Total
+      </span>
+
+      <strong id="cartTotal">
+        $0.00
+      </strong>
+
+    </div>
+
+
+    <button
+      class="checkout-btn"
+      id="checkoutBtn"
+      type="button"
+    >
+      Proceed to Checkout
+    </button>
+
+  </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     PRODUCT MODAL
+===================================================== -->
+
+<div
+  class="modal"
+  id="productModal"
+>
+
+  <div class="modal-box">
+
+    <button
+      class="modal-close"
+      id="closeProductModal"
+      type="button"
+    >
+      ×
+    </button>
+
+    <div
+      id="productModalContent"
+    ></div>
+
+  </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     CHECKOUT MODAL
+===================================================== -->
+
+<div
+  class="modal"
+  id="checkoutModal"
+>
+
+  <div class="modal-box checkout-box">
+
+    <button
+      class="modal-close"
+      id="closeCheckoutModal"
+      type="button"
+    >
+      ×
+    </button>
+
+
+    <h2>
+      Checkout
+    </h2>
+
+    <p class="checkout-subtitle">
+      Complete your information to place your order.
+    </p>
+
+
+    <form id="checkoutForm">
+
+
+      <div class="form-group">
+
+        <label for="customerName">
+          Full Name
+        </label>
+
+        <input
+          type="text"
+          id="customerName"
+          placeholder="Your full name"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="customerPhone">
+          Phone Number
+        </label>
+
+        <input
+          type="tel"
+          id="customerPhone"
+          placeholder="Your phone number"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="customerAddress">
+          Delivery Address
+        </label>
+
+        <textarea
+          id="customerAddress"
+          rows="4"
+          placeholder="Enter your delivery address"
+          required
+        ></textarea>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="paymentMethod">
+          Payment Method
+        </label>
+
+        <select
+          id="paymentMethod"
+          required
+        >
+
+          <option value="">
+            Select payment method
+          </option>
+
+          <option value="cash">
+            Cash on Delivery
+          </option>
+
+          <option value="telebirr">
+            Telebirr
+          </option>
+
+          <option value="bank">
+            Bank Transfer
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="checkout-btn"
+      >
+        Place Order
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     EXCHANGE MODAL
+===================================================== -->
+
+<div
+  class="modal"
+  id="exchangeModal"
+>
+
+  <div class="modal-box checkout-box">
+
+    <button
+      class="modal-close"
+      id="closeExchangeModal"
+      type="button"
+    >
+      ×
+    </button>
+
+
+    <p class="section-label">
+      EXCHANGE REQUEST
+    </p>
+
+    <h2>
+      Request an Exchange
+    </h2>
+
+    <p class="checkout-subtitle">
+      Tell the owner what you would like to offer.
+    </p>
+
+
+    <form id="exchangeForm">
+
+
+      <div class="form-group">
+
+        <label for="exchangeYourItem">
+          What do you have?
+        </label>
+
+        <input
+          type="text"
+          id="exchangeYourItem"
+          placeholder="Example: Samsung Galaxy S23"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="exchangeOffer">
+          What are you offering?
+        </label>
+
+        <textarea
+          id="exchangeOffer"
+          rows="4"
+          placeholder="Describe your offer..."
+          required
+        ></textarea>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="exchangePhone">
+          Contact Number
+        </label>
+
+        <input
+          type="tel"
+          id="exchangePhone"
+          placeholder="Your phone number"
+          required
+        >
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="checkout-btn"
+      >
+        Send Exchange Request
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     CREATE EXCHANGE MODAL
+===================================================== -->
+
+<div
+  class="modal"
+  id="createExchangeModal"
+>
+
+  <div class="modal-box checkout-box">
+
+    <button
+      class="modal-close"
+      id="closeCreateExchangeModal"
+      type="button"
+    >
+      ×
+    </button>
+
+
+    <p class="section-label">
+      CREATE LISTING
+    </p>
+
+    <h2>
+      Create Exchange Listing
+    </h2>
+
+
+    <form id="createExchangeForm">
+
+
+      <div class="form-group">
+
+        <label for="exchangeHave">
+          What do you have?
+        </label>
+
+        <input
+          type="text"
+          id="exchangeHave"
+          placeholder="Example: iPhone 13"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="exchangeWant">
+          What do you want?
+        </label>
+
+        <input
+          type="text"
+          id="exchangeWant"
+          placeholder="Example: Laptop"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="exchangeDescription">
+          Description
+        </label>
+
+        <textarea
+          id="exchangeDescription"
+          rows="4"
+          placeholder="Describe your item and exchange preference..."
+          required
+        ></textarea>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="exchangeLocation">
+          Location
+        </label>
+
+        <input
+          type="text"
+          id="exchangeLocation"
+          placeholder="City / Area"
+          required
+        >
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="checkout-btn"
+      >
+        Publish Exchange Listing
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+  <div class="footer-content">
+
+
+    <div class="footer-column">
+
+      <a
+        href="#home"
+        class="logo footer-logo"
+      >
+        <span>E</span>-Buy
+      </a>
+
+      <p>
+        A modern marketplace where people
+        can buy, sell and exchange products.
+      </p>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h3>
+        Marketplace
+      </h3>
+
+      <a href="#buy">
+        Buy
+      </a>
+
+      <a href="#sell">
+        Sell
+      </a>
+
+      <a href="#exchange">
+        Exchange
+      </a>
+
+      <a href="#categories">
+        Categories
+      </a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h3>
+        Support
+      </h3>
+
+      <a href="#contact">
+        Contact Us
+      </a>
+
+      <a href="#about">
+        About E-Buy
+      </a>
+
+      <a href="#">
+        Safety
+      </a>
+
+      <a href="#">
+        Terms
+      </a>
+
+    </div>
+
+
+    <div class="footer-column">
+
+      <h3>
+        Follow Us
+      </h3>
+
+      <div class="social-links">
+
+        <a href="#">
+          Facebook
+        </a>
+
+        <a href="#">
+          Instagram
+        </a>
+
+        <a href="#">
+          TikTok
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <p>
+      © 2026 E-Buy. All rights reserved.
+    </p>
+
+    <p>
+      Buy • Sell • Exchange
+    </p>
+
+  </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="script.js"></script>
 
 </body>
 </html>
