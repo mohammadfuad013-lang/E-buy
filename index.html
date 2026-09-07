@@ -4,15 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description" content="E-Buy - Shop electronics, fashion, home products and more at great prices.">
-  <meta name="keywords" content="E-Buy, ecommerce, online shopping, electronics, fashion, products">
-  <meta name="author" content="E-Buy">
-
   <title>E-Buy | Online Shopping</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="E-Buy - Shop electronics, fashion, home products, beauty, sports and accessories online.">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -20,13 +13,12 @@
 <body>
 
   <!-- ================= HEADER ================= -->
-
   <header class="header">
 
     <div class="top-header">
 
-      <a href="#" class="logo">
-        <span class="logo-e">E</span><span>-Buy</span>
+      <a href="#home" class="logo">
+        <span>E</span>-Buy
       </a>
 
       <div class="search-box">
@@ -36,46 +28,41 @@
           placeholder="Search products..."
           aria-label="Search products"
         >
-        <button id="searchBtn" aria-label="Search">🔍</button>
+        <button id="searchBtn">🔍</button>
       </div>
 
       <div class="header-actions">
 
         <button class="header-btn" id="accountBtn">
-          <span>👤</span>
+          👤
           <small>Account</small>
         </button>
 
         <button class="header-btn" id="wishlistBtn">
-          <span>♡</span>
+          ♡
+          <span id="wishlistCount">0</span>
           <small>Wishlist</small>
-          <b id="wishlistCount">0</b>
         </button>
 
-        <button class="header-btn cart-button" id="cartBtn">
-          <span>🛒</span>
+        <button class="header-btn" id="cartBtn">
+          🛒
+          <span id="cartCount">0</span>
           <small>Cart</small>
-          <b id="cartCount">0</b>
         </button>
 
       </div>
 
     </div>
 
-    <nav class="navigation">
+    <!-- Navigation -->
+    <nav class="navbar">
 
-      <button class="mobile-menu" id="mobileMenuBtn">☰</button>
-
-      <div class="nav-links" id="navLinks">
-
-        <a href="#home">Home</a>
-        <a href="#categories">Categories</a>
-        <a href="#products">Products</a>
-        <a href="#deals">Deals</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-
-      </div>
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#products">Products</a>
+      <a href="#deals">Deals</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
 
     </nav>
 
@@ -83,14 +70,13 @@
 
 
   <!-- ================= HERO ================= -->
-
   <main>
 
     <section class="hero" id="home">
 
       <div class="hero-content">
 
-        <span class="hero-label">WELCOME TO E-BUY</span>
+        <p class="hero-small">WELCOME TO E-BUY</p>
 
         <h1>
           Everything You Need.
@@ -98,124 +84,136 @@
         </h1>
 
         <p>
-          Discover quality products, amazing deals and a simple
-          shopping experience with E-Buy.
+          Discover quality products at great prices.
+          Shop electronics, fashion, home essentials and more.
         </p>
 
         <div class="hero-buttons">
-          <a href="#products" class="primary-btn">Shop Now →</a>
-          <a href="#categories" class="secondary-btn">Explore Categories</a>
+
+          <a href="#products" class="btn primary-btn">
+            Shop Now →
+          </a>
+
+          <a href="#categories" class="btn secondary-btn">
+            Explore Categories
+          </a>
+
         </div>
 
       </div>
 
-      <div class="hero-visual">
-
+      <div class="hero-image">
         <div class="hero-circle">
           🛍️
         </div>
-
-        <div class="floating-card card-one">
-          ⚡<strong>Hot Deals</strong>
-        </div>
-
-        <div class="floating-card card-two">
-          ⭐<strong>Quality Products</strong>
-        </div>
-
       </div>
 
     </section>
 
 
     <!-- ================= FEATURES ================= -->
-
     <section class="features">
 
       <div class="feature">
-        <div>🚚</div>
-        <section>
+        <div class="feature-icon">🚚</div>
+        <div>
           <h3>Fast Delivery</h3>
           <p>Quick and reliable delivery</p>
-        </section>
+        </div>
       </div>
 
       <div class="feature">
-        <div>🔒</div>
-        <section>
+        <div class="feature-icon">🔒</div>
+        <div>
           <h3>Secure Payment</h3>
-          <p>Safe and secure checkout</p>
-        </section>
+          <p>Your payment is protected</p>
+        </div>
       </div>
 
       <div class="feature">
-        <div>↩️</div>
-        <section>
+        <div class="feature-icon">↩️</div>
+        <div>
           <h3>Easy Returns</h3>
-          <p>Simple return process</p>
-        </section>
+          <p>Simple return policy</p>
+        </div>
       </div>
 
       <div class="feature">
-        <div>💬</div>
-        <section>
+        <div class="feature-icon">💬</div>
+        <div>
           <h3>Customer Support</h3>
           <p>We're here to help</p>
-        </section>
+        </div>
       </div>
 
     </section>
 
 
     <!-- ================= CATEGORIES ================= -->
-
     <section class="section" id="categories">
 
       <div class="section-heading">
+
         <div>
-          <span class="section-label">SHOP BY CATEGORY</span>
+          <p class="section-label">SHOP BY CATEGORY</p>
           <h2>Explore Categories</h2>
         </div>
 
-        <a href="#products" class="view-link">View All →</a>
+        <a href="#products" class="view-all">
+          View All →
+        </a>
+
       </div>
 
-      <div class="categories-grid">
+
+      <div class="category-grid">
 
         <button class="category-card" data-category="Electronics">
-          <div class="category-icon">📱</div>
+          <div class="category-image electronics">
+            📱
+          </div>
           <h3>Electronics</h3>
-          <p>Phones & gadgets</p>
+          <p>Phones, laptops & more</p>
         </button>
 
         <button class="category-card" data-category="Fashion">
-          <div class="category-icon">👕</div>
+          <div class="category-image fashion">
+            👕
+          </div>
           <h3>Fashion</h3>
-          <p>Style for everyone</p>
+          <p>Clothes & accessories</p>
         </button>
 
         <button class="category-card" data-category="Home">
-          <div class="category-icon">🏠</div>
+          <div class="category-image home">
+            🏠
+          </div>
           <h3>Home</h3>
-          <p>Make life comfortable</p>
+          <p>Everything for your home</p>
         </button>
 
         <button class="category-card" data-category="Beauty">
-          <div class="category-icon">✨</div>
+          <div class="category-image beauty">
+            💄
+          </div>
           <h3>Beauty</h3>
-          <p>Beauty & care</p>
+          <p>Beauty & personal care</p>
         </button>
 
         <button class="category-card" data-category="Sports">
-          <div class="category-icon">⚽</div>
+          <div class="category-image sports">
+            ⚽
+          </div>
           <h3>Sports</h3>
-          <p>Sport & fitness</p>
+          <p>Sports & fitness products</p>
         </button>
 
         <button class="category-card" data-category="Accessories">
-          <div class="category-icon">⌚</div>
+          <div class="category-image accessories">
+            ⌚
+          </div>
           <h3>Accessories</h3>
-          <p>Complete your style</p>
+          <p>Watches, bags & more</p>
         </button>
 
       </div>
@@ -223,31 +221,72 @@
     </section>
 
 
-    <!-- ================= PRODUCTS ================= -->
+    <!-- ================= DEALS ================= -->
+    <section class="deals-section" id="deals">
 
+      <div class="deal-content">
+
+        <p class="section-label">LIMITED TIME OFFER</p>
+
+        <h2>Special Deals</h2>
+
+        <p>
+          Get amazing products at special prices.
+          Don't miss today's offers!
+        </p>
+
+        <a href="#products" class="btn primary-btn">
+          Shop Deals →
+        </a>
+
+      </div>
+
+      <div class="deal-badge">
+        <strong>50%</strong>
+        <span>OFF</span>
+      </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
     <section class="section products-section" id="products">
 
       <div class="section-heading">
 
         <div>
-          <span class="section-label">OUR PRODUCTS</span>
+          <p class="section-label">OUR COLLECTION</p>
           <h2>Popular Products</h2>
         </div>
 
-        <div class="filters">
+        <div class="product-controls">
 
-          <button class="filter-btn active" data-filter="All">All</button>
-          <button class="filter-btn" data-filter="Electronics">Electronics</button>
-          <button class="filter-btn" data-filter="Fashion">Fashion</button>
-          <button class="filter-btn" data-filter="Home">Home</button>
+          <select id="categoryFilter">
+            <option value="all">All Categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Home">Home</option>
+            <option value="Beauty">Beauty</option>
+            <option value="Sports">Sports</option>
+            <option value="Accessories">Accessories</option>
+          </select>
+
+          <select id="sortProducts">
+            <option value="default">Sort By</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+            <option value="rating">Highest Rated</option>
+          </select>
 
         </div>
 
       </div>
 
-      <div class="products-grid" id="productsGrid"></div>
 
-      <div class="no-products" id="noProducts">
+      <!-- Products will be generated by JavaScript -->
+      <div class="product-grid" id="productGrid"></div>
+
+      <div class="no-products" id="noProducts" hidden>
         <div>🔎</div>
         <h3>No products found</h3>
         <p>Try another search or category.</p>
@@ -256,120 +295,175 @@
     </section>
 
 
-    <!-- ================= DEAL ================= -->
+    <!-- ================= WHY E-BUY ================= -->
+    <section class="why-section">
 
-    <section class="deal-section" id="deals">
+      <div class="why-image">
+        🛒
+      </div>
 
-      <div class="deal-content">
+      <div class="why-content">
 
-        <span>LIMITED TIME OFFER</span>
+        <p class="section-label">WHY CHOOSE E-BUY?</p>
 
-        <h2>Up to 40% OFF</h2>
+        <h2>
+          Shopping Made
+          <span>Simple & Better</span>
+        </h2>
 
         <p>
-          Save more on selected products while the offer lasts.
+          E-Buy brings a wide selection of products together
+          in one convenient online store.
         </p>
 
-        <a href="#products" class="primary-btn">Shop Deals →</a>
+        <div class="why-list">
+
+          <div>
+            <span>✓</span>
+            <p>Quality products</p>
+          </div>
+
+          <div>
+            <span>✓</span>
+            <p>Competitive prices</p>
+          </div>
+
+          <div>
+            <span>✓</span>
+            <p>Easy online shopping</p>
+          </div>
+
+          <div>
+            <span>✓</span>
+            <p>Customer-focused service</p>
+          </div>
+
+        </div>
 
       </div>
 
-      <div class="deal-icon">
-        🏷️
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section about-section" id="about">
+
+      <div class="section-heading">
+        <div>
+          <p class="section-label">ABOUT US</p>
+          <h2>About E-Buy</h2>
+        </div>
+      </div>
+
+      <div class="about-content">
+
+        <div class="about-card">
+
+          <div class="about-icon">🛍️</div>
+
+          <h3>Your Online Shopping Partner</h3>
+
+          <p>
+            E-Buy is an online shopping platform designed to make
+            discovering and buying products simple, convenient
+            and enjoyable.
+          </p>
+
+        </div>
+
+        <div class="about-card">
+
+          <div class="about-icon">⭐</div>
+
+          <h3>Our Goal</h3>
+
+          <p>
+            We aim to provide customers with a smooth shopping
+            experience, useful products and excellent service.
+          </p>
+
+        </div>
+
       </div>
 
     </section>
 
 
     <!-- ================= NEWSLETTER ================= -->
-
     <section class="newsletter">
 
       <div>
-        <span class="section-label">STAY UPDATED</span>
+
+        <p class="section-label">STAY UPDATED</p>
+
         <h2>Get the Latest Deals</h2>
-        <p>Subscribe to receive new product updates and special offers.</p>
+
+        <p>
+          Subscribe to receive new product and special offer updates.
+        </p>
+
       </div>
 
       <form id="newsletterForm">
 
         <input
           type="email"
-          id="emailInput"
+          id="newsletterEmail"
           placeholder="Enter your email address"
           required
         >
 
-        <button type="submit">Subscribe</button>
+        <button type="submit" class="btn primary-btn">
+          Subscribe
+        </button>
 
       </form>
 
     </section>
 
 
-    <!-- ================= ABOUT ================= -->
-
-    <section class="about section" id="about">
-
-      <div class="about-visual">
-        <div class="about-logo">E</div>
-      </div>
-
-      <div class="about-content">
-
-        <span class="section-label">ABOUT E-BUY</span>
-
-        <h2>Your Trusted Online Shopping Partner</h2>
-
-        <p>
-          E-Buy is designed to make online shopping easier, faster
-          and more convenient. We bring different product categories
-          together in one simple platform.
-        </p>
-
-        <div class="about-points">
-
-          <div>✓ Quality products</div>
-          <div>✓ Competitive prices</div>
-          <div>✓ Simple shopping experience</div>
-          <div>✓ Customer-focused service</div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
     <!-- ================= CONTACT ================= -->
-
-    <section class="contact section" id="contact">
+    <section class="section contact-section" id="contact">
 
       <div class="section-heading">
+
         <div>
-          <span class="section-label">CONTACT US</span>
+          <p class="section-label">CONTACT US</p>
           <h2>We're Here to Help</h2>
         </div>
+
       </div>
 
       <div class="contact-grid">
 
         <div class="contact-card">
-          <div>📧</div>
+
+          <div class="contact-icon">📧</div>
+
           <h3>Email</h3>
+
           <p>support@e-buy.com</p>
+
         </div>
 
         <div class="contact-card">
-          <div>📞</div>
+
+          <div class="contact-icon">📞</div>
+
           <h3>Phone</h3>
+
           <p>+251 900 000 000</p>
+
         </div>
 
         <div class="contact-card">
-          <div>📍</div>
+
+          <div class="contact-icon">📍</div>
+
           <h3>Location</h3>
-          <p>E-Buy Online Store</p>
+
+          <p>Online Store</p>
+
         </div>
 
       </div>
@@ -379,61 +473,6 @@
   </main>
 
 
-  <!-- ================= FOOTER ================= -->
-
-  <footer class="footer">
-
-    <div class="footer-container">
-
-      <div class="footer-brand">
-
-        <a href="#" class="logo footer-logo">
-          <span class="logo-e">E</span><span>-Buy</span>
-        </a>
-
-        <p>
-          Your modern online shopping destination.
-        </p>
-
-        <div class="socials">
-          <a href="#" aria-label="Facebook">f</a>
-          <a href="#" aria-label="Instagram">◎</a>
-          <a href="#" aria-label="TikTok">♪</a>
-          <a href="#" aria-label="YouTube">▶</a>
-        </div>
-
-      </div>
-
-      <div class="footer-column">
-        <h3>Shopping</h3>
-        <a href="#products">All Products</a>
-        <a href="#categories">Categories</a>
-        <a href="#deals">Deals</a>
-      </div>
-
-      <div class="footer-column">
-        <h3>Company</h3>
-        <a href="#about">About Us</a>
-        <a href="#contact">Contact</a>
-        <a href="#">Privacy Policy</a>
-      </div>
-
-      <div class="footer-column">
-        <h3>Customer Service</h3>
-        <a href="#">Help Center</a>
-        <a href="#">Shipping</a>
-        <a href="#">Returns</a>
-      </div>
-
-    </div>
-
-    <div class="copyright">
-      © <span id="year"></span> E-Buy. All rights reserved.
-    </div>
-
-  </footer>
-
-
   <!-- ================= CART SIDEBAR ================= -->
 
   <div class="overlay" id="overlay"></div>
@@ -441,23 +480,34 @@
   <aside class="cart-sidebar" id="cartSidebar">
 
     <div class="cart-header">
+
       <h2>Your Cart</h2>
-      <button id="closeCart">×</button>
+
+      <button id="closeCart" class="close-btn">
+        ×
+      </button>
+
     </div>
 
     <div class="cart-items" id="cartItems"></div>
 
-    <div class="empty-cart" id="emptyCart">
+    <div class="cart-empty" id="cartEmpty">
+
       <div>🛒</div>
+
       <h3>Your cart is empty</h3>
+
       <p>Add products to start shopping.</p>
+
     </div>
 
-    <div class="cart-bottom">
+    <div class="cart-footer">
 
       <div class="cart-total">
+
         <span>Total</span>
         <strong id="cartTotal">$0.00</strong>
+
       </div>
 
       <button class="checkout-btn" id="checkoutBtn">
@@ -473,36 +523,13 @@
 
   <div class="modal" id="productModal">
 
-    <div class="modal-content">
+    <div class="modal-box">
 
-      <button class="modal-close" id="closeModal">×</button>
+      <button class="modal-close" id="closeProductModal">
+        ×
+      </button>
 
-      <div class="modal-product">
-
-        <div class="modal-image" id="modalImage"></div>
-
-        <div class="modal-info">
-
-          <span class="product-category" id="modalCategory"></span>
-
-          <h2 id="modalName"></h2>
-
-          <div class="rating">
-            ⭐⭐⭐⭐⭐
-            <span>4.8</span>
-          </div>
-
-          <p id="modalDescription"></p>
-
-          <div class="modal-price" id="modalPrice"></div>
-
-          <button class="primary-btn modal-add" id="modalAdd">
-            Add to Cart
-          </button>
-
-        </div>
-
-      </div>
+      <div id="productModalContent"></div>
 
     </div>
 
@@ -513,46 +540,101 @@
 
   <div class="modal" id="checkoutModal">
 
-    <div class="modal-content checkout-content">
+    <div class="modal-box checkout-box">
 
-      <button class="modal-close" id="closeCheckout">×</button>
+      <button class="modal-close" id="closeCheckoutModal">
+        ×
+      </button>
 
       <h2>Checkout</h2>
 
       <p class="checkout-subtitle">
-        Complete your order information.
+        Complete your information to place your order.
       </p>
 
       <form id="checkoutForm">
 
-        <label>
-          Full Name
-          <input type="text" id="customerName" required>
-        </label>
+        <div class="form-group">
 
-        <label>
-          Phone Number
-          <input type="tel" id="customerPhone" required>
-        </label>
+          <label for="customerName">
+            Full Name
+          </label>
 
-        <label>
-          Delivery Address
-          <textarea id="customerAddress" rows="3" required></textarea>
-        </label>
+          <input
+            type="text"
+            id="customerName"
+            placeholder="Your full name"
+            required
+          >
 
-        <label>
-          Payment Method
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="customerPhone">
+            Phone Number
+          </label>
+
+          <input
+            type="tel"
+            id="customerPhone"
+            placeholder="Your phone number"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="customerAddress">
+            Delivery Address
+          </label>
+
+          <textarea
+            id="customerAddress"
+            rows="4"
+            placeholder="Enter your delivery address"
+            required
+          ></textarea>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label for="paymentMethod">
+            Payment Method
+          </label>
 
           <select id="paymentMethod" required>
-            <option value="">Select payment method</option>
-            <option value="cash">Cash on Delivery</option>
-            <option value="bank">Bank Transfer</option>
-            <option value="mobile">Mobile Payment</option>
+
+            <option value="">
+              Select payment method
+            </option>
+
+            <option value="cash">
+              Cash on Delivery
+            </option>
+
+            <option value="telebirr">
+              Telebirr
+            </option>
+
+            <option value="bank">
+              Bank Transfer
+            </option>
+
           </select>
 
-        </label>
+        </div>
 
-        <button class="checkout-btn" type="submit">
+
+        <button
+          type="submit"
+          class="checkout-btn"
+        >
           Place Order
         </button>
 
@@ -563,14 +645,91 @@
   </div>
 
 
-  <!-- ================= NOTIFICATION ================= -->
+  <!-- ================= FOOTER ================= -->
 
-  <div class="notification" id="notification">
-    <span>✓</span>
-    <p id="notificationText">Added to cart</p>
-  </div>
+  <footer class="footer">
+
+    <div class="footer-content">
+
+      <div class="footer-column">
+
+        <a href="#home" class="logo footer-logo">
+          <span>E</span>-Buy
+        </a>
+
+        <p>
+          Your trusted online shopping destination.
+          Quality products, great prices.
+        </p>
+
+      </div>
 
 
+      <div class="footer-column">
+
+        <h3>Quick Links</h3>
+
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#categories">Categories</a>
+        <a href="#deals">Deals</a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>Customer Service</h3>
+
+        <a href="#contact">Contact Us</a>
+        <a href="#about">About Us</a>
+        <a href="#">Shipping</a>
+        <a href="#">Returns</a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>Follow Us</h3>
+
+        <div class="social-links">
+
+          <a href="#" aria-label="Facebook">
+            Facebook
+          </a>
+
+          <a href="#" aria-label="Instagram">
+            Instagram
+          </a>
+
+          <a href="#" aria-label="TikTok">
+            TikTok
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 E-Buy. All rights reserved.
+      </p>
+
+      <p>
+        Built for better online shopping.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- JavaScript -->
   <script src="script.js"></script>
 
 </body>
