@@ -1706,23 +1706,506 @@ setupNewsletter();
 /* =========================
    ACCOUNT BUTTON
    ========================= */
+/* =========================
+   ACCOUNT SYSTEM
+   ========================= */
+
+let currentUser = null;
+
+async function checkLoginStatus() {
+    try {
+        const response = await fetch("session.php", {
+            credentials: "include"
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            currentUser = data.user;
+        } else {
+            currentUser = null;
+        }
+
+        updateAccountButton();
+
+    } catch (error) {
+        console.log("Session check failed:", error);
+        currentUser = null;
+        updateAccountButton();
+    }
+}
+
+
+function updateAccountButton() {
+
+    const account = document.getElementById("accountBtn");
+
+    if (!account) return;
+
+    if (currentUser) {
+
+        account.textContent = "👤 " + currentUser.name;
+
+    } else {
+
+        account.textContent = "👤 Account";
+
+    }
+}
+
+
+function openAccountModal() {
+
+    let modal = document.getElementById("accountModal");
+
+    if (!modal) {
+
+        modal = document.createElement("div");
+
+        modal.id = "accountModal";
+        modal.className = "modal-overlay";
+
+        modal.innerHTML = `
+            <div class="modal">
+
+                <button
+                    class="modal-close"
+                    onclick="closeAccountModal()"
+                >
+                    ✕
+                </button>
+
+                <div id="accountContent"></div>
+
+            </div>
+        `;
+
+        document.body.appendChild(modal);
+    }
+
+    renderAccountContent();
+
+    modal.classList.add("active");
+    document.body.classList.add("no-scroll");
+}
+
+
+function renderAccountContent() {
+
+    const content =
+        document.getElementById("accountContent");
+
+    if (!content) return;
+
+
+    /* LOGGED IN */
+
+    if (currentUser) {
+
+        content.innerHTML = `
+
+            <h2>Welcome, ${currentUser.name}! 👋</h2>
+
+            <p class="modal-subtitle">
+                You are logged in to E-Buy.
+            </p>
+
+            <div class="form-group">
+                <strong>Email:</strong>
+                <p>${currentUser.email}</p>
+            </div>
+
+            <div class="form-group">
+                <strong>Location:</strong>
+                <p>${currentUser.location || "Not provided"}</p>
+            </div>
+
+            <div class="form-group">
+                <strong>Account type:</strong>
+                <p>${currentUser.role}</p>
+            </div>
+
+            <button
+                class="btn btn-primary btn-full"
+                onclick="logoutUser()"
+            >
+                Logout
+            </button>
+        `;
+
+        return;
+    }
+
+
+    /* NOT LOGGED IN */
+
+    content.innerHTML = `
+
+        <h2>Welcome to E-Buy 👋</h2>
+
+        <p class="modal-subtitle">
+            Login or create an account to continue.
+        </p>
+
+        <form id="loginForm">
+
+            <div class="form-group">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="loginEmail"
+                    required
+                    placeholder="Enter your email"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="loginPassword"
+                    required
+                    placeholder="Enter your password"
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary btn-full"
+            >
+                Login
+            </button>
+
+        </form>
+
+
+        <div style="text-align:center; margin-top:20px;">
+
+            <p>
+                Don't have an account?
+            </p>
+
+            <button
+                class="btn btn-secondary btn-full"
+                onclick="showRegisterForm()"
+            >
+                Create Account
+            </button>
+
+        </div>
+    `;
+
+
+    document
+        .getElementById("loginForm")
+        .addEventListener(
+            "submit",
+            loginUser
+        );
+}
+
+
+async function loginUser(event) {
+
+    event.preventDefault();
+
+    const email =
+        document.getElementById("loginEmail").value.trim();
+
+    const password =
+        document.getElementById("loginPassword").value;
+
+
+    const formData = new FormData();
+
+    formData.append("email", email);
+    formData.append("password", password);
+
+
+    try {
+
+        const response = await fetch(
+            "login.php",
+            {
+                method: "POST",
+                body: formData,
+                credentials: "include"
+            }
+        );
+
+
+        const data = await response.json();
+
+
+        if (!data.success) {
+
+            showToast(data.message);
+
+            return;
+        }
+
+
+        currentUser = data.user;
+
+        updateAccountButton();
+
+        showToast("Login successful! 🎉");
+
+        renderAccountContent();
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        showToast(
+            "Unable to connect to the server."
+        );
+    }
+}
+
+
+function showRegisterForm() {
+
+    const content =
+        document.getElementById("accountContent");
+
+    if (!content) return;
+
+
+    content.innerHTML = `
+
+        <h2>Create E-Buy Account</h2>
+
+        <p class="modal-subtitle">
+            Join E-Buy and start buying, selling and exchanging.
+        </p>
+
+
+        <form id="registerForm">
+
+            <div class="form-group">
+
+                <label>Full Name</label>
+
+                <input
+                    type="text"
+                    id="registerName"
+                    required
+                    placeholder="Your full name"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="registerEmail"
+                    required
+                    placeholder="you@example.com"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="registerPassword"
+                    required
+                    minlength="6"
+                    placeholder="At least 6 characters"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Location</label>
+
+                <input
+                    type="text"
+                    id="registerLocation"
+                    placeholder="Your city"
+                >
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="btn btn-primary btn-full"
+            >
+                Create Account
+            </button>
+
+        </form>
+
+
+        <div style="text-align:center; margin-top:20px;">
+
+            <button
+                class="btn btn-secondary btn-full"
+                onclick="renderAccountContent()"
+            >
+                ← Back to Login
+            </button>
+
+        </div>
+    `;
+
+
+    document
+        .getElementById("registerForm")
+        .addEventListener(
+            "submit",
+            registerUser
+        );
+}
+
+
+async function registerUser(event) {
+
+    event.preventDefault();
+
+
+    const formData = new FormData();
+
+    formData.append(
+        "name",
+        document.getElementById("registerName").value.trim()
+    );
+
+    formData.append(
+        "email",
+        document.getElementById("registerEmail").value.trim()
+    );
+
+    formData.append(
+        "password",
+        document.getElementById("registerPassword").value
+    );
+
+    formData.append(
+        "location",
+        document.getElementById("registerLocation").value.trim()
+    );
+
+
+    try {
+
+        const response = await fetch(
+            "register.php",
+            {
+                method: "POST",
+                body: formData,
+                credentials: "include"
+            }
+        );
+
+
+        const data = await response.json();
+
+
+        if (!data.success) {
+
+            showToast(data.message);
+
+            return;
+        }
+
+
+        showToast(
+            "Account created successfully! 🎉"
+        );
+
+
+        renderAccountContent();
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        showToast(
+            "Unable to connect to the server."
+        );
+    }
+}
+
+
+async function logoutUser() {
+
+    try {
+
+        await fetch(
+            "logout.php",
+            {
+                credentials: "include"
+            }
+        );
+
+    } catch (error) {
+
+        console.error(error);
+    }
+
+
+    currentUser = null;
+
+    updateAccountButton();
+
+    closeAccountModal();
+
+    showToast("You have been logged out.");
+}
+
+
+function closeAccountModal() {
+
+    const modal =
+        document.getElementById("accountModal");
+
+    if (modal) {
+
+        modal.classList.remove("active");
+
+    }
+
+    document.body.classList.remove("no-scroll");
+}
+
+
+/* Account button */
 
 document.addEventListener(
     "click",
     function(event) {
 
         const account =
-            event.target.closest(
-                "#accountBtn, .account-btn, [data-action='account']"
-            );
+            event.target.closest("#accountBtn");
 
         if (!account) return;
 
         event.preventDefault();
 
-        showToast(
-            "Account system will be connected to the database later."
-        );
+        openAccountModal();
     }
 );
 
